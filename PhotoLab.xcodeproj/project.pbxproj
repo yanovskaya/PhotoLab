@@ -13,6 +13,18 @@
 		C42561E721FD97F300729C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42561E521FD97F300729C0C /* Main.storyboard */; };
 		C42561E921FD97F700729C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42561E821FD97F700729C0C /* Assets.xcassets */; };
 		C42561EC21FD97F700729C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42561EA21FD97F700729C0C /* LaunchScreen.storyboard */; };
+		C49F000E21FDBDC600AB756B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F000D21FDBDC600AB756B /* PhotoViewController.swift */; };
+		C49F001321FDC21100AB756B /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001021FDC21100AB756B /* Transport.swift */; };
+		C49F001521FDC21100AB756B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001221FDC21100AB756B /* Parser.swift */; };
+		C49F001721FDC22B00AB756B /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001621FDC22B00AB756B /* ServiceLayer.swift */; };
+		C49F002021FDC23800AB756B /* NewsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001921FDC23800AB756B /* NewsServiceImpl.swift */; };
+		C49F002121FDC23800AB756B /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001B21FDC23800AB756B /* NewsService.swift */; };
+		C49F002221FDC23800AB756B /* AddNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001D21FDC23800AB756B /* AddNewsResponse.swift */; };
+		C49F002321FDC23800AB756B /* NewsRepsonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001E21FDC23800AB756B /* NewsRepsonse.swift */; };
+		C49F002421FDC23800AB756B /* DeleteNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F001F21FDC23800AB756B /* DeleteNewsResponse.swift */; };
+		C49F002621FDC37200AB756B /* AddPhotoPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F002521FDC37200AB756B /* AddPhotoPresentationModel.swift */; };
+		C49F002821FDCA8600AB756B /* PresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F002721FDCA8500AB756B /* PresentationModel.swift */; };
+		C49F002A21FDCB3B00AB756B /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F002921FDCB3B00AB756B /* PhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +37,18 @@
 		C42561E821FD97F700729C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42561EB21FD97F700729C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42561ED21FD97F700729C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C49F000D21FDBDC600AB756B /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		C49F001021FDC21100AB756B /* Transport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
+		C49F001221FDC21100AB756B /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		C49F001621FDC22B00AB756B /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		C49F001921FDC23800AB756B /* NewsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsServiceImpl.swift; sourceTree = "<group>"; };
+		C49F001B21FDC23800AB756B /* NewsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		C49F001D21FDC23800AB756B /* AddNewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewsResponse.swift; sourceTree = "<group>"; };
+		C49F001E21FDC23800AB756B /* NewsRepsonse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRepsonse.swift; sourceTree = "<group>"; };
+		C49F001F21FDC23800AB756B /* DeleteNewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteNewsResponse.swift; sourceTree = "<group>"; };
+		C49F002521FDC37200AB756B /* AddPhotoPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoPresentationModel.swift; sourceTree = "<group>"; };
+		C49F002721FDCA8500AB756B /* PresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationModel.swift; sourceTree = "<group>"; };
+		C49F002921FDCB3B00AB756B /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		D3DF7D4A0F97A657166FF1C2 /* Pods-PhotoLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoLab/Pods-PhotoLab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,14 +102,58 @@
 		C42561E021FD97F300729C0C /* PhotoLab */ = {
 			isa = PBXGroup;
 			children = (
+				C49F002721FDCA8500AB756B /* PresentationModel.swift */,
 				C42561E121FD97F300729C0C /* AppDelegate.swift */,
 				C42561E321FD97F300729C0C /* ViewController.swift */,
+				C49F002921FDCB3B00AB756B /* PhotoViewModel.swift */,
+				C49F002521FDC37200AB756B /* AddPhotoPresentationModel.swift */,
 				C42561E521FD97F300729C0C /* Main.storyboard */,
 				C42561E821FD97F700729C0C /* Assets.xcassets */,
 				C42561EA21FD97F700729C0C /* LaunchScreen.storyboard */,
 				C42561ED21FD97F700729C0C /* Info.plist */,
+				C49F000D21FDBDC600AB756B /* PhotoViewController.swift */,
+				C49F001621FDC22B00AB756B /* ServiceLayer.swift */,
+				C49F001821FDC23800AB756B /* Service */,
+				C49F000F21FDC21100AB756B /* Core Components */,
 			);
 			path = PhotoLab;
+			sourceTree = "<group>";
+		};
+		C49F000F21FDC21100AB756B /* Core Components */ = {
+			isa = PBXGroup;
+			children = (
+				C49F001021FDC21100AB756B /* Transport.swift */,
+				C49F001221FDC21100AB756B /* Parser.swift */,
+			);
+			path = "Core Components";
+			sourceTree = "<group>";
+		};
+		C49F001821FDC23800AB756B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C49F001921FDC23800AB756B /* NewsServiceImpl.swift */,
+				C49F001A21FDC23800AB756B /* Protocol */,
+				C49F001C21FDC23800AB756B /* Parser */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C49F001A21FDC23800AB756B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C49F001B21FDC23800AB756B /* NewsService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C49F001C21FDC23800AB756B /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				C49F001D21FDC23800AB756B /* AddNewsResponse.swift */,
+				C49F001E21FDC23800AB756B /* NewsRepsonse.swift */,
+				C49F001F21FDC23800AB756B /* DeleteNewsResponse.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +282,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49F002621FDC37200AB756B /* AddPhotoPresentationModel.swift in Sources */,
 				C42561E421FD97F300729C0C /* ViewController.swift in Sources */,
+				C49F001721FDC22B00AB756B /* ServiceLayer.swift in Sources */,
+				C49F002821FDCA8600AB756B /* PresentationModel.swift in Sources */,
+				C49F002121FDC23800AB756B /* NewsService.swift in Sources */,
+				C49F002321FDC23800AB756B /* NewsRepsonse.swift in Sources */,
+				C49F002021FDC23800AB756B /* NewsServiceImpl.swift in Sources */,
+				C49F002421FDC23800AB756B /* DeleteNewsResponse.swift in Sources */,
 				C42561E221FD97F300729C0C /* AppDelegate.swift in Sources */,
+				C49F002A21FDCB3B00AB756B /* PhotoViewModel.swift in Sources */,
+				C49F002221FDC23800AB756B /* AddNewsResponse.swift in Sources */,
+				C49F001521FDC21100AB756B /* Parser.swift in Sources */,
+				C49F000E21FDBDC600AB756B /* PhotoViewController.swift in Sources */,
+				C49F001321FDC21100AB756B /* Transport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +446,10 @@
 				DEVELOPMENT_TEAM = JHLX4XGDFC;
 				INFOPLIST_FILE = PhotoLab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinepsys.PhotoLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -383,7 +466,10 @@
 				DEVELOPMENT_TEAM = JHLX4XGDFC;
 				INFOPLIST_FILE = PhotoLab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinepsys.PhotoLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
