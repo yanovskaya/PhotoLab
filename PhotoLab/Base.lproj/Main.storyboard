@@ -75,17 +75,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daL-Hx-doz">
-                                <rect key="frame" x="40" y="617" width="295" height="30"/>
-                                <color key="backgroundColor" red="0.74470716714859009" green="0.37227213382720947" blue="0.15343445539474487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Поделиться в Facebook">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="shateToFacebook:" destination="fE7-5h-1RY" eventType="touchUpInside" id="iKz-b4-pzX"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmM-ye-x5Y">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
@@ -94,17 +83,13 @@
                         <constraints>
                             <constraint firstItem="wmM-ye-x5Y" firstAttribute="centerX" secondItem="vhF-ns-cfF" secondAttribute="centerX" id="0SW-Hp-cpZ"/>
                             <constraint firstItem="wmM-ye-x5Y" firstAttribute="leading" secondItem="vhF-ns-cfF" secondAttribute="leading" id="EAM-vF-HvF"/>
-                            <constraint firstItem="daL-Hx-doz" firstAttribute="centerX" secondItem="vhF-ns-cfF" secondAttribute="centerX" id="Gf3-GL-0lq"/>
                             <constraint firstItem="wmM-ye-x5Y" firstAttribute="top" secondItem="vhF-ns-cfF" secondAttribute="top" id="LD2-sA-vzn"/>
-                            <constraint firstItem="daL-Hx-doz" firstAttribute="leading" secondItem="vhF-ns-cfF" secondAttribute="leading" constant="40" id="UkD-XM-H8E"/>
                             <constraint firstItem="wmM-ye-x5Y" firstAttribute="bottom" secondItem="vhF-ns-cfF" secondAttribute="bottom" id="wUe-2n-MVe"/>
-                            <constraint firstItem="vhF-ns-cfF" firstAttribute="bottom" secondItem="daL-Hx-doz" secondAttribute="bottom" constant="20" id="yrb-YR-vA5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhF-ns-cfF"/>
                     </view>
                     <connections>
                         <outlet property="newImageView" destination="wmM-ye-x5Y" id="Wkw-M2-uyp"/>
-                        <outlet property="shareButton" destination="daL-Hx-doz" id="hpD-jI-kRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOJ-ZC-UX3" userLabel="First Responder" sceneMemberID="firstResponder"/>

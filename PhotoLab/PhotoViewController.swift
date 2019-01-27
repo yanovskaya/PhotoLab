@@ -12,16 +12,13 @@ import Kingfisher
 class PhotoViewController: UIViewController {
 
     var photoLink: String!
-    @IBOutlet var newImageView: UIImageView! 
-    
-    @IBOutlet var shareButton: UIButton!
+    @IBOutlet var newImageView: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         newImageView.kf.indicatorType = .activity
         newImageView.kf.setImage(with: URL(string: photoLink))
-        shareButton.layer.cornerRadius = 3
     }
 
     @IBAction func shateToFacebook(_ sender: Any) {
