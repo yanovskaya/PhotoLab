@@ -71,16 +71,16 @@ class ViewController: UIViewController {
         presentationModel.changeStateHandler = { status in
             switch status {
             case .loading:
+                print("load")
                 break
                 //HUD.show(.progress)
             case .rich:
-                let secondViewController = PhotoViewController()
+                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "PhotoViewController") as! PhotoViewController
                 secondViewController.photoLink = self.presentationModel.photoViewModel.photoURL
-                
                 self.present(secondViewController, animated: true, completion: nil)
-                //HUD.hide()
-                self.dismiss(animated: true)
+                print("rich")
             case .error (let code):
+                print("error")
                 break
             }
         }

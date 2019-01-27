@@ -64,11 +64,13 @@ final class PhotoServiceImpl: PhotoService {
                             switch transportResult {
                             case .transportSuccess(let payload):
                                 let resultBody = payload.resultBody
+                                
                                 let parseResult = self.addPhotoParser.parse(from: resultBody)
                                 switch parseResult {
                                 case .parserSuccess(let model):
                                     
                                         completion?(ServiceCallResult.serviceSuccess(payload: model.link))
+                                    return
                                     
                                 case .parserFailure(let error):
                                     

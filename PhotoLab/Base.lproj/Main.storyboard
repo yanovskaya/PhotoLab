@@ -70,12 +70,12 @@
         <!--Photo View Controller-->
         <scene sceneID="d37-3Y-Kqa">
             <objects>
-                <viewController id="fE7-5h-1RY" customClass="PhotoViewController" customModule="PhotoLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="fE7-5h-1RY" customClass="PhotoViewController" customModule="PhotoLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzH-hd-vkx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daL-Hx-doz">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daL-Hx-doz">
                                 <rect key="frame" x="40" y="617" width="295" height="30"/>
                                 <color key="backgroundColor" red="0.74470716714859009" green="0.37227213382720947" blue="0.15343445539474487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -86,7 +86,7 @@
                                     <action selector="shateToFacebook:" destination="fE7-5h-1RY" eventType="touchUpInside" id="iKz-b4-pzX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmM-ye-x5Y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wmM-ye-x5Y">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
@@ -103,7 +103,8 @@
                         <viewLayoutGuide key="safeArea" id="vhF-ns-cfF"/>
                     </view>
                     <connections>
-                        <outlet property="newImage" destination="wmM-ye-x5Y" id="yXt-mV-0SP"/>
+                        <outlet property="newImageView" destination="wmM-ye-x5Y" id="Wkw-M2-uyp"/>
+                        <outlet property="shareButton" destination="daL-Hx-doz" id="hpD-jI-kRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOJ-ZC-UX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
