@@ -21,11 +21,12 @@ final class AddPhotoPresentationModel: PresentationModel {
     
     // MARK: - Public Methods
     
-    func addPhoto(image: UIImage) {
+    func addPhoto(title: String, image: UIImage) {
         state = .loading
-        photoService.addPhoto(title: "Elena Yanovskaya", image: image) { result in
+        photoService.addPhoto(title: title, image: image) { result in
             switch result {
-            case .serviceSuccess:
+            case .serviceSuccess(let photo):
+                self.photoViewModel = PhotoViewModel(photo)
                 self.state = .rich
             case .serviceFailure(let error):
                 self.state = .error(code: error.code)

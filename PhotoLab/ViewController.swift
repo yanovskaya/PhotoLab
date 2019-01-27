@@ -8,11 +8,14 @@
 
 import UIKit
 import Photos
-import PKHUD
+//import PKHUD
 
 class ViewController: UIViewController {
     
     // MARK: - Constants
+    
+    @IBOutlet var loadButton: UIButton!
+    @IBOutlet var nameTextField: UITextField!
     
     private enum Constants {
         static let cancel = "Отмена"
@@ -22,10 +25,14 @@ class ViewController: UIViewController {
     }
     
     var presentationModel = AddPhotoPresentationModel()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameTextField.delegate = self
+        bindEvents()
+        hideKeyboardWhenTappedAround()
+        loadButton.layer.cornerRadius = 3
     }
 
     @IBAction func chooseImage(_ sender: Any) {
@@ -46,7 +53,7 @@ class ViewController: UIViewController {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             alertController.addAction(cameraAction)
         }
-        let removeAction = UIAlertAction(title: Constants.removePhoto, style: .destructive)
+//        let removeAction = UIAlertAction(title: Constants.removePhoto, style: .destructive)
 //        { _ in
 //            self.imageToAttach = nil
 //        }
@@ -64,14 +71,23 @@ class ViewController: UIViewController {
         presentationModel.changeStateHandler = { status in
             switch status {
             case .loading:
-                HUD.show(.progress)
+                break
+                //HUD.show(.progress)
             case .rich:
-                HUD.hide()
+                let secondViewController = PhotoViewController()
+                secondViewController.photoLink = self.presentationModel.photoViewModel.photoURL
+                
+                self.present(secondViewController, animated: true, completion: nil)
+                //HUD.hide()
                 self.dismiss(animated: true)
             case .error (let code):
                 break
             }
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
@@ -83,14 +99,30 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-           // imageToAttach = image отправить на сервак - получить картинку
-            //pkhud
-            //
-            
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            presentationModel.addPhoto(title: nameTextField.text!, image: image)
         }
         dismiss(animated: true, completion: nil)
     }
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
+    
 
+// MARK: - UITextFieldDelegate
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return false
+    }
+}

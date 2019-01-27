@@ -6,9 +6,6 @@
 //  Copyright © 2019 Elena Yanovskaya. All rights reserved.
 //
 
-class Photo: Decodable {
-    var url: String!
-}
 
 import Foundation
 
@@ -17,7 +14,7 @@ class PhotoViewModel {
     // MARK: - Constants
     
     private enum Constants {
-        static let baseURL = "https://makub.ru"
+        static let baseURL = "http://sinep.tech"
     }
     
     // MARK: - Public Properties
@@ -26,9 +23,9 @@ class PhotoViewModel {
     
     // MARK: - Initialization
     
-    init(_ photo: Photo) {
+    init(_ photo: String) {
         
-        self.photoURL = (Constants.baseURL + photo.url).encodeInURL()
+        self.photoURL = (Constants.baseURL + photo).encodeInURL()
     }
 }
 

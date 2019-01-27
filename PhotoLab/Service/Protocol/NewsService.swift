@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 protocol PhotoService: class {
-    func addPhoto(title: String, image: UIImage, completion: ((ServiceCallResult<Photo>) -> Void)?)
+    func addPhoto(title: String, image: UIImage, completion: ((ServiceCallResult<AddPhotoResponce>) -> Void)?)
 }
 
 enum ServiceCallResult<Payload> {
-    case serviceSuccess(payload: Payload?)
+    case serviceSuccess(payload: String)
     case serviceFailure(error: NSError)
 }

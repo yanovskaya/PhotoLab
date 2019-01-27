@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AddNewsResponse: Decodable {
+struct AddPhotoResponce: Decodable {
     
-    let error: Int
+    let link: String
 }

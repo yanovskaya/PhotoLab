@@ -14,12 +14,12 @@ final class PhotoServiceImpl: PhotoService {
     // MARK: - Constants
     
     private enum Constants {
-        static let baseURL = "https://makub.ru/api"
+        static let baseURL = "http://sinep.tech"
         static let tokenParameter = "token"
         
-        static let titleParameter = "title"
+        static let titleParameter = "name"
         static let textParameter = "text"
-        static let imageParameter = "image"
+        static let imageParameter = "user_photo"
         
         static let idParameter = "id"
         
@@ -27,9 +27,7 @@ final class PhotoServiceImpl: PhotoService {
     }
     
     private enum EndPoint {
-        static let news = "/news"
-        static let addPhoto = "/add_article"
-        static let deletePhoto = "/article_delete"
+        static let addPhoto = "/photo-hack/transform-photo"
     }
     
     // MARK: - Private Properties
@@ -37,7 +35,7 @@ final class PhotoServiceImpl: PhotoService {
     private let requestSessionManager: SessionManager
     private let uploadSessionManager: SessionManager
     private var transport: Transport!
-    private let addPhotoParser = Parser<Photo>()
+    private let addPhotoParser = Parser<AddPhotoResponce>()
     
     // MARK: - Initialization
     
@@ -49,16 +47,20 @@ final class PhotoServiceImpl: PhotoService {
     // MARK: - Public Methods
     
     
-    func addPhoto(title: String, image: UIImage, completion: ((ServiceCallResult<Photo>) -> Void)?) {
-        let parameters = [Constants.titleParameter: title]
-        let imageData = UIImageJPEGRepresentation(image, 1)
+    func addPhoto(title: String, image: UIImage, completion: ((ServiceCallResult<AddPhotoResponce>) -> Void)?) {
+        
+        let parameters = [Constants.titleParameter: title, "link": "true"]
+        let imageData = image.jpegData(compressionQuality: 1)
+        
         let randomName = String(length: 5)
+         transport = Transport(sessionManager: uploadSessionManager)
         transport.upload(method: .post,
                          url: Constants.baseURL + EndPoint.addPhoto,
                          parameters: parameters,
                          data: imageData!,
                          name: Constants.imageParameter,
                          fileName: randomName + Constants.jpgExtension) { transportResult in
+                            
                             switch transportResult {
                             case .transportSuccess(let payload):
                                 let resultBody = payload.resultBody
@@ -66,12 +68,14 @@ final class PhotoServiceImpl: PhotoService {
                                 switch parseResult {
                                 case .parserSuccess(let model):
                                     
-                                        completion?(ServiceCallResult.serviceSuccess(payload: nil))
+                                        completion?(ServiceCallResult.serviceSuccess(payload: model.link))
                                     
                                 case .parserFailure(let error):
+                                    
                                     completion?(ServiceCallResult.serviceFailure(error: error))
                                 }
                             case .transportFailure(let error):
+                                
                                 completion?(ServiceCallResult.serviceFailure(error: error))
                             }
         }

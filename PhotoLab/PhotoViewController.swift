@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoViewController: UIViewController {
 
+    var photoLink: String!
     @IBOutlet var newImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        newImage.kf.indicatorType = .activity
+        newImage.kf.setImage(with: URL(string: photoLink))
     }
 
     @IBAction func shateToFacebook(_ sender: Any) {

@@ -19,13 +19,11 @@ PODS:
   - FBSDKShareKit (4.33.0):
     - FBSDKCoreKit (~> 4.33.0)
   - Kingfisher (4.8.0)
-  - PKHUD (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - FacebookShare
   - Kingfisher
-  - PKHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -36,7 +34,6 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKShareKit
     - Kingfisher
-    - PKHUD
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -46,8 +43,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKShareKit: 1869cb24db2cea90666a50cb9d568deb38e2d16e
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
-  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
 
-PODFILE CHECKSUM: 92b0e941b9ce175cc72328b4c2308bc00c64d0a6
+PODFILE CHECKSUM: a5c7f1f234a4a98590667d303a1eb1181fe76e7a
 
 COCOAPODS: 1.5.3
