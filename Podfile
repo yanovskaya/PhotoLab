@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'PhotoLab' do
   pod 'Alamofire'
-  pod 'PKHUD'
   pod 'Kingfisher'
+  pod 'PKHUD'
+  pod 'FacebookShare'
 end

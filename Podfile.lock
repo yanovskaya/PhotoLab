@@ -1,24 +1,53 @@
 PODS:
   - Alamofire (4.7.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.3.1):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.33)
+  - FacebookShare (0.3.1):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3.1)
+    - FBSDKCoreKit (~> 4.33)
+    - FBSDKShareKit (~> 4.33)
+  - FBSDKCoreKit (4.33.0):
+    - Bolts (~> 1.7)
+  - FBSDKShareKit (4.33.0):
+    - FBSDKCoreKit (~> 4.33.0)
   - Kingfisher (4.8.0)
   - PKHUD (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - FacebookShare
   - Kingfisher
   - PKHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Bolts
+    - FacebookCore
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKShareKit
     - Kingfisher
     - PKHUD
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
+  FacebookShare: c9ee8e5399d961fda00ded9befccacfe04fccf93
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKShareKit: 1869cb24db2cea90666a50cb9d568deb38e2d16e
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
 
-PODFILE CHECKSUM: 6d0baad4a600e4fd3b4f423f06ac749206bedc72
+PODFILE CHECKSUM: 92b0e941b9ce175cc72328b4c2308bc00c64d0a6
 
 COCOAPODS: 1.5.3
