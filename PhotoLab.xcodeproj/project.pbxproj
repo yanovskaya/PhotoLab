@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833D95F6765BAA82907F95D4 /* Pods_PhotoLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07894CB84F3F541922252F92 /* Pods_PhotoLab.framework */; };
 		C42561E221FD97F300729C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42561E121FD97F300729C0C /* AppDelegate.swift */; };
 		C42561E421FD97F300729C0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42561E321FD97F300729C0C /* ViewController.swift */; };
 		C42561E721FD97F300729C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42561E521FD97F300729C0C /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07894CB84F3F541922252F92 /* Pods_PhotoLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F71DD6FFFABEBDE3B677D3D /* Pods-PhotoLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoLab/Pods-PhotoLab.release.xcconfig"; sourceTree = "<group>"; };
 		C42561DE21FD97F300729C0C /* PhotoLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42561E121FD97F300729C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42561E321FD97F300729C0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		C42561E821FD97F700729C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42561EB21FD97F700729C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42561ED21FD97F700729C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3DF7D4A0F97A657166FF1C2 /* Pods-PhotoLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoLab/Pods-PhotoLab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833D95F6765BAA82907F95D4 /* Pods_PhotoLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11B460B1B29128D05E1AF211 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07894CB84F3F541922252F92 /* Pods_PhotoLab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97E3BA8D5F4657E6004F45D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF7D4A0F97A657166FF1C2 /* Pods-PhotoLab.debug.xcconfig */,
+				4F71DD6FFFABEBDE3B677D3D /* Pods-PhotoLab.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C42561D521FD97F300729C0C = {
 			isa = PBXGroup;
 			children = (
 				C42561E021FD97F300729C0C /* PhotoLab */,
 				C42561DF21FD97F300729C0C /* Products */,
+				97E3BA8D5F4657E6004F45D6 /* Pods */,
+				11B460B1B29128D05E1AF211 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C42561F021FD97F700729C0C /* Build configuration list for PBXNativeTarget "PhotoLab" */;
 			buildPhases = (
+				639A483496B205E6AB108C78 /* [CP] Check Pods Manifest.lock */,
 				C42561DA21FD97F300729C0C /* Sources */,
 				C42561DB21FD97F300729C0C /* Frameworks */,
 				C42561DC21FD97F300729C0C /* Resources */,
+				CF1E1482B270FB5BC3D1BB32 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		639A483496B205E6AB108C78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoLab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1E1482B270FB5BC3D1BB32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhotoLab/Pods-PhotoLab-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoLab/Pods-PhotoLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C42561DA21FD97F300729C0C /* Sources */ = {
@@ -280,15 +349,13 @@
 		};
 		C42561F121FD97F700729C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3DF7D4A0F97A657166FF1C2 /* Pods-PhotoLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHLX4XGDFC;
 				INFOPLIST_FILE = PhotoLab/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PhotoLab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,15 +365,13 @@
 		};
 		C42561F221FD97F700729C0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F71DD6FFFABEBDE3B677D3D /* Pods-PhotoLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHLX4XGDFC;
 				INFOPLIST_FILE = PhotoLab/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PhotoLab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
